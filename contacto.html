@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de Contacto - Dino Call-Center</title>
+    <link rel="stylesheet" href="css/estilos2.css">
+    <link rel="icon" type="image/x-icon" href="images/dinosaurio3.png">
+</head>
+<body>
+    <div class="rectangle">
+        <div class="dropdown">
+            <button class="dropbtn">Menú</button>
+            <div class="dropdown-content">
+                <a href="index.html">Inicio</a>
+                <a href="pagina.html">Quiénes Somos</a>
+                <a href="Servisios.html">Servicios</a>
+                <a href="contacto.html">Contacto</a>
+                <a href="Mejor Empleado.html">Mejor empleado</a>
+            </div>
+        </div>
+    </div> 
+    
+    <main>
+        <div class="contact_form">
+            <h1>Formulario de Contacto</h1>
+            <h3>Deja tu Opinión</h3>
+
+            <form action="https://formspree.io/f/xjkbgaob" method="POST">
+                <p>
+                    <label for="nombre">Nombre <span class="obligatorio">*</span></label>
+                    <input type="text" name="nombre" id="nombre" required placeholder="Escribe tu nombre">
+                </p>
+                <p>
+                    <label for="email">Email <span class="obligatorio">*</span></label>
+                    <input type="email" name="email" id="email" required placeholder="Escribe tu email">
+                </p>
+                <p>
+                    <label for="telefono">Teléfono <span class="obligatorio">*</span></label>
+                    <input type="tel" name="telefono" id="telefono" required placeholder="Escribe tu teléfono">
+                </p>
+                <p>
+                    <label for="mensaje">Mensaje <span class="obligatorio">*</span></label>
+                    <textarea name="mensaje" id="mensaje" required placeholder="Escribe tu mensaje"></textarea>
+                </p>
+                <div class="button-container">
+                    <button type="submit">Enviar</button>
+                </div>
+                <p class="aviso"><span class="obligatorio">*</span> Todos los campos son obligatorios.</p>
+            </form>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Dino Call-Center.</p>
+    </footer>
+</body>
+</html>

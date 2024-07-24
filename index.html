@@ -1,0 +1,77 @@
+<!<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/index.css"> 
+    <link rel="icon" type="image/x-icon" href="images/dinosaurio3.png"> 
+    <title>Dino CallCenter</title>
+    <style>
+      
+        @keyframes sweep {
+            0% { transform: scaleX(0); }
+            100% { transform: scaleX(1); }
+        }
+    </style>
+</head>
+<body>
+    <div class="dinosaurio3">
+        <span>¡</span>
+        <span>B</span>
+        <span>I</span>
+        <span>E</span>
+        <span>N</span>
+        <span>V</span>
+        <span>E</span>
+        <span>N</span>
+        <span>I</span>
+        <span>D</span>
+        <span>O</span>
+        <span>S</span>
+        <span>!</span>
+    </div>
+    <div class="Bienvenida">
+        <span>🦕🦕🦖🦖🦖🦕Dino Call-Center🦕🦕🦖🦖🦖🦕</span>
+    </div>
+    <div class="BUTTON">
+        <button class="botones"><a href="pagina.html" style="color: rgb(18, 184, 68);">Entrar</a></button>
+    </div>
+    <div id="bubble-container"></div>
+
+    <script>
+        function createBubble() {
+            const bubble = document.createElement('div');
+            bubble.className = 'bubble';
+
+            const size = Math.random() * 80 + 20; 
+            bubble.style.width = `${size}px`;
+            bubble.style.height = `${size}px`;
+
+            bubble.style.left = `${Math.random() * 100}%`;
+
+            bubble.style.animationDuration = `${Math.random() * 15 + 8}s`; 
+
+            bubble.style.animationDelay = `${Math.random() * 4}s`; 
+
+            document.getElementById('bubble-container').appendChild(bubble);
+
+            bubble.addEventListener('animationend', () => {
+                bubble.remove();
+            });
+        }
+
+        setInterval(createBubble, 10000); 
+
+        const bienvenida = document.querySelector('.Bienvenida');
+        const text = bienvenida.textContent;
+        bienvenida.innerHTML = '';
+        for (let i = 0; i < text.length; i++) {
+            const span = document.createElement('span');
+            span.textContent = text[i];
+            span.style.animation = `sweep 1s infinite ${i / 10}s`;
+            bienvenida.appendChild(span);
+        }
+    </script>
+</body>
+</html>
